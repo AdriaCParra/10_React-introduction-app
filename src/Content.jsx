@@ -1,4 +1,4 @@
-import { Parts } from "./Parts";
+import { Parts } from "./Part";
 
 export const Content = ({ parts, exercises }) => {
   return (
