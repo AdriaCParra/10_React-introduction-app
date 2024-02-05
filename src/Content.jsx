@@ -1,11 +1,12 @@
-import { Parts } from "./Part";
+import { Part } from "./Part";
 
-export const Content = ({ parts, exercises }) => {
+export const Content = ({ courseData }) => {
   return (
     <>
-      <Parts parts={parts[0]} exercises={exercises[0]} />
-      <Parts parts={parts[1]} exercises={exercises[1]} />
-      <Parts parts={parts[2]} exercises={exercises[2]} />
+      {courseData.map((course) => {
+        const { part, exercises } = course;
+        return <Part key={part} part={part} exercises={exercises} />;
+      })}
     </>
   );
 };
